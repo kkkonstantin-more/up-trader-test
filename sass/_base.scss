@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+  // this specifies what 1rem is
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1 rem = 8px;
+  }
+
+  @include respond(phone) {
+    font-size: 45%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1 rem = 12
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  //overflow-y: hidden;
+}
+
+.u-container {
+  max-width: 856px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 800px;
+  }
+
+  @include respond(tab-port) {
+    max-width: 650px;
+  }
+
+  @include respond(large-desktop) {
+    max-width: 1320px;
+  }
+}

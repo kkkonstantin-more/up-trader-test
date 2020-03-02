@@ -1,0 +1,133 @@
+.header {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../assets/header-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  transition: opacity 1s;
+
+  @include respond(phone) {
+    background-position: bottom;
+    align-items: normal;
+    padding-bottom: 2rem;
+  }
+
+  &__content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: margin-top 1s;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: -2px;
+    color: #171717;
+
+    @include respond(phone) {
+      margin-top: 5rem;
+      font-size: 5rem;
+      font-weight: 400;
+    }
+  }
+
+  &__options {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+}
+
+.option {
+  width: 25rem;
+  height: 25rem;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  @include respond(phone) {
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+    padding: 2rem 3rem;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__icon {
+    margin-top: -3rem;
+    height: 6rem;
+    width: 6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include respond(phone) {
+      margin-top: 0;
+      height: 5rem;
+      width: 5rem;
+      margin-right: 2rem;
+    }
+  }
+
+  &__name {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    color: #242424;
+
+    @include respond(phone) {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+  }
+
+  &__arrow {
+    margin-left: auto;
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
+
+  &__hover-block {
+    border-radius: 50%;
+    height: 95%;
+    width: 95%;
+    border: 1px solid #14b3a8;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &:hover > &__hover-block {
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s;
+  }
+}

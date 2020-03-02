@@ -1,0 +1,77 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UpTraderTest</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="header" id="header">
+        <div class="header__content u-container" id="headerContent">
+            <h1 class="header__title">
+                Выберите способ зароботка
+            </h1>
+            <div class="header__options">
+                <div class="option" id="animationToggle">
+                    <div class="option__icon" style="background-image: url('./assets/icon-1.png')"></div>
+                    <div class="option__name" id="changeableOptionName">
+                        Торговать
+                    </div>
+                    <img src="assets/arrow-down.png" alt="arrow-down" class="option__arrow" id="toggleArrow">
+                    <div class="option__hover-block"></div>
+                </div>
+                <div id="infoMobile"></div>
+                <div class="option">
+                    <div class="option__icon" style="background-image: url('./assets/icon-3.png')"></div>
+                    <div class="option__name">
+                        Инвестировать
+                    </div>
+                    <img src="assets/arrow-down.png" alt="arrow-down" class="option__arrow">
+                    <div class="option__hover-block"></div>
+                </div>
+                <div class="option">
+                    <div class="option__icon" style="background-image: url('./assets/icon-2.png')"></div>
+                    <div class="option__name">
+                        Привлекать инвесторов
+                    </div>
+                    <img src="assets/arrow-down.png" alt="arrow-down" class="option__arrow">
+                    <div class="option__hover-block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info" id="info">
+        <div class="info__content" id="infoContent">
+            <div class="info__tabs">
+                <div class="u-container">
+                    <div class="info__tab info__tab--active">Торговать</div>
+                    <div class="info__tab">Инвестировать</div>
+                    <div class="info__tab">Привлекать инвесторов</div>
+                </div>
+                <div class="info__tabs-border"></div>
+            </div>
+            <div class="info__instruction u-container">
+                <div>Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не ограничена!</div>
+                <div>Как это работает</div>
+                <ol>
+                    <li>Вы выбираете управляющего из рейтинга по фильтру Options</li>
+                    <li>Подключаете свой счет к счету Управляющего</li>
+                    <li>На вашем счете начинается копирование сделок</li>
+                    <li>Обратите внимание, что вы не перечисляете свои деньги Управляющему. Все ваши средства остаются на Вашем счете.</li>
+                    <li>Вы можете подключиться к нескольким Управляющим одновременно.</li>
+                    <li>Вы можете отключиться от Управляющих в любой момент.</li>
+                </ol>
+            </div>
+            <div class="u-container">
+                <button class="info__button" id="changeableButton">Продолжить</button>
+            </div>
+            <img class="info__mobile-img" src="assets/mobile-info-img.png"
+                 alt="Guy is lying at the beach with a notebook">
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
